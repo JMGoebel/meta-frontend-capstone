@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const Nav = () => {
   return (
     <nav>
-      <ul>
+      <ul className="header-nav">
         <li>
           <a href="#home">Home</a>
         </li>
@@ -25,5 +25,4 @@ export const Nav = () => {
       </ul>
     </nav>
   );
-}
-
+};

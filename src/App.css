@@ -1,1 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
 
+
+body {
+    display: flexbox;
+    flex-direction: row;
+
+}
+
+/* HEADER */
+header {
+    display: flex;
+    height: 120px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header>img {
+    height: 64px;
+}
+
+.header-nav {
+    list-style: none;
+    font-size: 18px;
+}
+
+.header-nav>li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header-nav>li>a {
+    text-decoration: none;
+    color: #495E57;
+    font-weight: 700;
+}
+
+.header-nav>li>a:hover {
+    color: #F4CE14
+}
+
+/* Main */
+
+/* Hero */

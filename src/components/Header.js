@@ -4,7 +4,7 @@ import logo from "../assets/Logo.svg"
 
 export const Header = () => {
   return (
-    <header className="App-header">
+    <header className="header">
       <img src={logo} alt="" />
       <Nav />
     </header>
