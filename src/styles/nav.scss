@@ -1,3 +1,5 @@
+@use '../variables';
+
 /* ---------- MOBILE ---------- */
 
 .nav-component {
@@ -5,7 +7,7 @@
   width: 100%;
 
   ul {
-    background-color: white;
+    background-color: variables.$brand-white;
   }
 
   li {
@@ -13,17 +15,17 @@
     list-style: none;
     font-size: 18px;
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid variables.$brand-green;
   }
 
   a {
     text-decoration: none;
-    color: #495e57;
+    color: variables.$brand-green;
     font-weight: 700;
   }
 
   a:hover {
-    color: #f4ce14;
+    color: variables.$brand-yellow;
   }
 }
 
