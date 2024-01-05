@@ -1,8 +1,9 @@
 import React from "react";
+import '../styles/nav.scss'
 
 export const Nav = () => {
   return (
-    <nav>
+    <nav className="nav-component">
       <ul className="header-nav">
         <li>
           <a href="#home">Home</a>

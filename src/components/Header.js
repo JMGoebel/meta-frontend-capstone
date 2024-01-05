@@ -1,11 +1,18 @@
 import React from "react";
 import { Nav } from "./Nav";
-import logo from "../assets/Logo.svg"
+import { HambugerMenu } from "./HambugerMenu";
+import logo from "../assets/Logo.svg";
+import cart from "../assets/icon_cart.svg";
 
 export const Header = () => {
   return (
-    <header className="header">
-      <img src={logo} alt="" />
+    <header>
+      {/* Mobile Header */}
+      <HambugerMenu />
+      <img className="cart" src={cart} alt="" />
+      
+      {/* Desktop Header */}
+      <img className="logo" src={logo} alt="" />
       <Nav />
     </header>
   );
