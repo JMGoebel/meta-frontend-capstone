@@ -11,8 +11,8 @@ export const HambugerMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Close the menu if clicked outside of the component
   const closeMenu = () => {
-    console.log('close menu');
     setMenuOpen(false);
   };
 
@@ -27,17 +27,16 @@ export const HambugerMenu = () => {
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  });
+  }, []);
 
   return (
     <>
-      <div className="hamburger-component" ref={refDropDown}>
-        <img
-          className="hamburger"
-          onClick={toggleMenu}
-          src={hamburger}
-          alt=""
-        />
+      <div
+        className="hamburger-component"
+        ref={refDropDown}
+        onClick={toggleMenu}
+      >
+        <img className="hamburger" src={hamburger} alt="" />
         <div
           className="dropdown"
           style={{ display: menuOpen ? 'flex' : 'none' }}
