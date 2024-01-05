@@ -1,54 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { routes } from '../routes';
 import '../styles/nav.scss';
 
 export const Nav = () => {
-  const [routes, setRoutes] = useState([]);
-
+  const navRoutes = routes[0].children;
+  const [links, setLinks] = useState(navRoutes);
   let location = useLocation();
 
-  const navigationPaths = [
-    {
-      path: '/',
-      name: 'Home',
-    },
-    {
-      path: '/about',
-      name: 'About',
-    },
-    {
-      path: '/menu',
-      name: 'Menu',
-    },
-    {
-      path: '/reservation',
-      name: 'Reservations',
-    },
-    {
-      path: '/online',
-      name: 'Order Online',
-    },
-    {
-      path: '/login',
-      name: 'Login',
-    },
-  ];
-
-  // Remove routes from the list if user is on that current route
+  // Do not show surrent route
   useEffect(() => {
-    const displayPaths = navigationPaths.filter(route => {
-      return route.path != location.pathname;
+    const displayPaths = navRoutes.filter(link => {
+      return link.path != location.pathname;
     });
 
-    setRoutes(displayPaths);
+    setLinks(displayPaths);
   }, [location]);
 
   return (
     <nav className="nav-component">
       <ul className="header-nav">
-        {routes.map(route => (
-          <li>
-            <Link to={route.path}>{route.name}</Link>
+        {links.map(link => (
+          <li> 
+            <Link to={link.path}>{link.name}</Link>
           </li>
         ))}
       </ul>

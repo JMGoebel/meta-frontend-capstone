@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 export const ProductCard = ({
-  img = "",
-  title = "default",
-  price = "$0.00",
-  description = "default",
+  img = '',
+  title = 'default',
+  price = '$0.00',
+  description = 'default',
 }) => {
   return (
     <>
